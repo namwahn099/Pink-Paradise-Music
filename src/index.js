@@ -67,6 +67,7 @@ async function getInitialNodes() {
     }
 
     provider.startAutoRefresh();
+  provider.getNextNode(); // Skip the first public node for testing
     const firstNode = provider.getNextNode();
     logger.warn('Using public Lavalink servers — search queries and track requests are sent to third-party servers');
     logger.info(`Selected public node: ${firstNode.secure ? 'wss' : 'ws'}://${firstNode.host}:${firstNode.port}`);
