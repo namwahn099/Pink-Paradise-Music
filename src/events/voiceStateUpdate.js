@@ -1,4 +1,3 @@
-
 const { Events } = require('discord.js');
 const searchSessions = require('../utils/searchSessions');
 const { clearGuildLifecycleTimers } = require('../utils/playerLifecycle');
