@@ -189,7 +189,11 @@ async function setupLavalink(client) {
     });
 
     client.lavalink.nodeManager.on('error', (node, error) => {
-        client.lavalinkConnectionManager.onError(node, error);
+       logger.error(
+        `Lavalink node error (${node?.id || 'unknown'}):`,
+        error?.stack || error?.message || error
+    );
+      client.lavalinkConnectionManager.onError(node, error);
     });
 
     client.lavalink.nodeManager.on('disconnect', (node, reason) => {
