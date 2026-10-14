@@ -49,7 +49,7 @@ async function getInitialNodes() {
             nodes: [{
     host: process.env.LAVALINK_HOST,
     port: parseInt(process.env.LAVALINK_PORT, 10),
-    secure: true,
+    secure: false,
     authorization: process.env.LAVALINK_PASSWORD,
     id: 'main-node',
                 reconnectTimeout: 10000,
